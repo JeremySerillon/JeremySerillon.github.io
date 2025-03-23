@@ -4,100 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jeremy Serillon - Robotics Engineer</title>
+  <!-- Using Montserrat for a modern sans-serif look -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* Global Styles */
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #222;
+      font-family: 'Montserrat', sans-serif;
       line-height: 1.6;
-      color: #333;
-      background-color: #f4f4f4;
-      padding-bottom: 2rem;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 1.5rem 0;
-      text-align: center;
-    }
-    header h1 {
-      margin-bottom: 0.3rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      background: #fff;
-      margin: 2rem auto;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .contact-info,
-    .skills ul,
-    .languages ul,
-    .awards ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .contact-info li {
-      margin-bottom: 0.5rem;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .grid > div {
-      flex: 1 1 300px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #333;
-      color: #fff;
-      position: relative;
-      bottom: 0;
-      width: 100%;
     }
     a {
-      color: #0066cc;
+      color: #E41A1C;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
+    }
+    
+    /* Header */
+    header {
+      background-color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #E41A1C;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 10px;
+      margin: 0 0 10px;
+    }
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 0;
+    }
+    .navbar {
+      margin-top: 20px;
+    }
+    .navbar a {
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: #222;
+    }
+    .navbar a:hover {
+      color: #E41A1C;
+    }
+    
+    /* Main Container */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
+    /* Section Styles */
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      border-bottom: 2px solid #E41A1C;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    section h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    p, li {
+      font-size: 0.95rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    /* Grid Layout for multi-item sections */
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .grid > div {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Jeremy Serillon</h1>
-    <p>Robotics Engineer</p>
-    <nav>
+    <h1>JEREMY SERILLON</h1>
+    <h2>ROBOTICS ENGINEER</h2>
+    <div class="navbar">
       <a href="#profile">Profile</a>
       <a href="#education">Education</a>
       <a href="#experience">Work Experiences &amp; Projects</a>
@@ -106,7 +120,7 @@
       <a href="#languages">Languages</a>
       <a href="#interests">Interests</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
   </header>
 
   <div class="container">
@@ -115,7 +129,7 @@
       <h2>Profile</h2>
       <p>I am a Master’s student in robotics engineering at the EPFL. With 5 years of experience in project creation and management in diverse environments such as international, academic, and associative (NPOs), I am eager to engage in new experiences and acquire knowledge from them. Dynamic, efficient, curious, and creative, I am convinced that I will positively contribute to your team.</p>
     </section>
-
+    
     <!-- Education Section -->
     <section id="education">
       <h2>Education</h2>
@@ -137,14 +151,14 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Work Experiences & Projects Section -->
     <section id="experience">
       <h2>Work Experiences &amp; Projects</h2>
       <div class="grid">
         <div>
           <h3>Multimedia Manager – ARTIPHYS Association</h3>
-          <p>Driving &amp; developing multimedia strategic projects related to a festival of 1,500 participants.</p>
+          <p>Drive &amp; develop multimedia strategic projects related to a festival of 1,500 participants.</p>
           <p><em>2024 - Ongoing</em></p>
         </div>
         <div>
@@ -174,7 +188,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Skills Section -->
     <section id="skills">
       <h2>Skills</h2>
@@ -214,7 +228,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Awards Section -->
     <section id="awards">
       <h2>Awards</h2>
@@ -231,7 +245,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Languages Section -->
     <section id="languages">
       <h2>Languages</h2>
@@ -242,20 +256,21 @@
         <li><strong>Italian:</strong> Basic (A2)</li>
       </ul>
     </section>
-
+    
     <!-- Interests Section -->
     <section id="interests">
       <h2>Interests</h2>
       <p><strong>Arts:</strong> Filmmaking, film production/realization, video editing, VFX, photography, music production, piano (10+ years self-taught), and music festivals organization.</p>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact">
       <h2>Contact</h2>
-      <ul class="contact-info">
-        <li><strong>Email:</strong> <a href="mailto:jeremy.serillon.pro@gmail.com">jeremy.serillon.pro@gmail.com</a></li>
-        <li><strong>Location:</strong> Lausanne and outskirts, Switzerland</li>
-        <li><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/jeremyserillon" target="_blank">http://www.linkedin.com/in/jeremyserillon</a></li>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:jeremy.serillon@epfl.ch">jeremy.serillon@epfl.ch</a></li>
+        <li><strong>Phone:</strong> +41 79 284 69 14</li>
+        <li><strong>Location:</strong> Pully, Switzerland</li>
+        <li><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/jeremyserillon" target="_blank">Jeremy Serillon</a></li>
       </ul>
     </section>
   </div>
