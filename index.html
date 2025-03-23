@@ -104,6 +104,17 @@
       border-top: 1px solid #ddd;
       margin-top: 40px;
     }
+    
+    /* Fade-in Animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -125,13 +136,13 @@
 
   <div class="container">
     <!-- Profile Section -->
-    <section id="profile">
+    <section id="profile" class="fade">
       <h2>Profile</h2>
       <p>I am a Master’s student in robotics engineering at the EPFL. With 5 years of experience in project creation and management in diverse environments such as international, academic, and associative (NPOs), I am eager to engage in new experiences and acquire knowledge from them. Dynamic, efficient, curious, and creative, I am convinced that I will positively contribute to your team.</p>
     </section>
     
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="fade">
       <h2>Education</h2>
       <div class="grid">
         <div>
@@ -153,7 +164,7 @@
     </section>
     
     <!-- Work Experiences & Projects Section -->
-    <section id="experience">
+    <section id="experience" class="fade">
       <h2>Work Experiences &amp; Projects</h2>
       <div class="grid">
         <div>
@@ -190,7 +201,7 @@
     </section>
     
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="fade">
       <h2>Skills</h2>
       <div class="grid">
         <div>
@@ -230,7 +241,7 @@
     </section>
     
     <!-- Awards Section -->
-    <section id="awards">
+    <section id="awards" class="fade">
       <h2>Awards</h2>
       <div class="grid">
         <div>
@@ -247,7 +258,7 @@
     </section>
     
     <!-- Languages Section -->
-    <section id="languages">
+    <section id="languages" class="fade">
       <h2>Languages</h2>
       <ul>
         <li><strong>French:</strong> Fluent (native tongue)</li>
@@ -258,13 +269,13 @@
     </section>
     
     <!-- Interests Section -->
-    <section id="interests">
+    <section id="interests" class="fade">
       <h2>Interests</h2>
       <p><strong>Arts:</strong> Filmmaking, film production/realization, video editing, VFX, photography, music production, piano (10+ years self-taught), and music festivals organization.</p>
     </section>
     
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="fade">
       <h2>Contact</h2>
       <ul>
         <li><strong>Email:</strong> <a href="mailto:jeremy.serillon.pro@gmail.com">jeremy.serillon.pro@gmail.com</a></li>
@@ -277,6 +288,30 @@
   <footer>
     <p>&copy; 2025 Jeremy Serillon. All Rights Reserved.</p>
   </footer>
+  
+  <script>
+    // Wait for DOM content to load before running the observer script
+    document.addEventListener('DOMContentLoaded', function() {
+      const faders = document.querySelectorAll('.fade');
+      const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px"
+      };
 
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+  
 </body>
 </html>
